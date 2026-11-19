@@ -1,97 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>普惠AI · 产品下载中心</title>
-<style>
-  :root{
-    --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#e6edf3;
-    --muted:#9198a1; --accent:#2f81f7; --accent2:#3fb950;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}
-  .wrap{max-width:1080px;margin:0 auto;padding:48px 20px 80px}
-  header{text-align:center;margin-bottom:52px}
-  h1{font-size:34px;letter-spacing:-.5px;margin-bottom:12px}
-  .lead{color:var(--muted);font-size:16px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:.2s}
-  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
-  .card h2{font-size:20px;margin-bottom:6px}
-  .tag{display:inline-block;font-size:12px;color:var(--accent2);border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);padding:2px 8px;border-radius:20px;margin-bottom:12px}
-  .desc{color:var(--muted);font-size:14px;flex:1;margin-bottom:18px}
-  .actions{display:flex;gap:10px;flex-wrap:wrap}
-  .btn{display:inline-block;padding:9px 16px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;transition:.15s}
-  .btn-primary{background:var(--accent);color:#fff}
-  .btn-primary:hover{background:#1f6feb}
-  .btn-ghost{border:1px solid var(--border);color:var(--text)}
-  .btn-ghost:hover{border-color:var(--muted)}
-  footer{margin-top:56px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border);padding-top:24px}
-  footer a{color:var(--accent);text-decoration:none}
-  .note{background:rgba(47,129,247,.08);border:1px solid rgba(47,129,247,.3);border-radius:10px;padding:14px 18px;font-size:14px;color:var(--muted);margin-top:36px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>普惠AI 产品中心 - AI Agent、提示词引擎与效率工具下载</title>
+  <meta name="description" content="普惠AI 产品中心提供猫盾 AI Agent 规范监视器、普惠AI 指令拆解引擎、拦接宝来电拦截助手和龙虾 Pro Windows AI 工作台的官方下载与反馈入口。">
+  <meta name="theme-color" content="#0d1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="普惠AI 产品中心">
+  <meta property="og:description" content="AI Agent、提示词引擎、来电拦截和 Windows 桌面工具的官方下载中心。">
+  <meta property="og:image" content="assets/social-preview.png">
+  <meta property="og:url" content="https://puhuiai.github.io/website/">
+  <link rel="canonical" href="https://puhuiai.github.io/website/">
+  <style>
+    :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#e6edf3;--muted:#9198a1;--accent:#2f81f7;--green:#3fb950;--coral:#f05a43}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 10%,#173247 0,var(--bg) 42%);color:var(--text);font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}
+    .wrap{max-width:1080px;margin:auto;padding:56px 20px 80px}header{margin-bottom:44px}h1{font-size:clamp(34px,6vw,58px);letter-spacing:-1.4px;margin:0 0 12px}.lead{color:var(--muted);font-size:17px;max-width:760px}.kicker{color:var(--coral);font-size:13px;font-weight:700;letter-spacing:.14em;margin-bottom:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}.card{scroll-margin-top:24px;background:rgba(22,27,34,.94);border:1px solid var(--border);border-radius:16px;padding:24px;display:flex;flex-direction:column;transition:.18s}.card:hover{border-color:var(--accent);transform:translateY(-3px)}.card h2{font-size:21px;margin:0 0 8px}.tag{display:inline-block;align-self:flex-start;font-size:12px;color:var(--green);border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);padding:2px 9px;border-radius:999px;margin-bottom:12px}.desc{color:var(--muted);font-size:14px;flex:1;margin:0 0 18px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;padding:9px 16px;border-radius:9px;text-decoration:none;font-size:14px;font-weight:650}.primary{background:var(--accent);color:#fff}.primary:hover{background:#1f6feb}.ghost{border:1px solid var(--border);color:var(--text)}.ghost:hover{border-color:var(--muted)}
+    .note{margin-top:36px;padding:18px 20px;border:1px solid rgba(47,129,247,.3);background:rgba(47,129,247,.08);border-radius:12px;color:var(--muted);font-size:14px}.note a,footer a{color:var(--accent);text-decoration:none}footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;text-align:center}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"普惠AI 产品中心","url":"https://puhuiai.github.io/website/","itemListElement":[{"@type":"SoftwareApplication","name":"拦接宝","applicationCategory":"UtilitiesApplication","operatingSystem":"Android"},{"@type":"SoftwareApplication","name":"猫盾","applicationCategory":"SecurityApplication","operatingSystem":"Windows"},{"@type":"SoftwareApplication","name":"普惠AI 指令拆解引擎","applicationCategory":"DeveloperApplication","operatingSystem":"Windows"},{"@type":"SoftwareApplication","name":"龙虾 Pro","applicationCategory":"DeveloperApplication","operatingSystem":"Windows"}]}
+  </script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>普惠AI · 产品下载中心</h1>
-    <p class="lead">四款自研工具，免费下载使用 · 闭源软件 · 欢迎反馈意见</p>
-  </header>
+  <main class="wrap">
+    <header>
+      <div class="kicker">PUHUIAI / AI TOOLS</div>
+      <h1>普惠AI 产品中心</h1>
+      <p class="lead">AI Agent 规范监视、中文提示词拆解、智能来电拦截和 Windows AI 工作台。官方下载与问题反馈集中在这里。</p>
+    </header>
 
-  <div class="grid">
-    <div class="card">
-      <span class="tag">Android</span>
-      <h2>拦接宝 LanJieBao 2.0</h2>
-      <p class="desc">拦截骚扰来电，可疑来电先由 AI 代接并留下留言与录音，事后推送到手机。</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://github.com/puhuiai/lanjiebao/releases/download/v2.0.0/LanJieBao-2.0.0-beta.apk">下载内测版</a>
-        <a class="btn btn-ghost" href="https://github.com/puhuiai/lanjiebao">说明 / 反馈</a>
-      </div>
-    </div>
+    <section class="grid">
+      <article class="card" id="lanjiebao">
+        <span class="tag">Android</span><h2>拦接宝 LanJieBao 2.1</h2>
+        <p class="desc">拦截骚扰来电，可疑来电先由 AI 代接并留下留言与录音，号码归属地在本机离线查询。</p>
+        <div class="actions"><a class="btn primary" href="https://github.com/puhuiai/lanjiebao/releases/download/v2.1.0/LanJieBao-2.1.0-store.apk">下载商店版</a><a class="btn ghost" href="https://github.com/puhuiai/lanjiebao">说明 / 反馈</a></div>
+      </article>
+      <article class="card" id="fanrenge">
+        <span class="tag">Windows / CLI</span><h2>普惠AI 指令拆解引擎 4.0</h2>
+        <p class="desc">把中文需求拆成可执行的提示词、任务包与 AI 工作流，内置术语库和多阶段任务模板。</p>
+        <div class="actions"><a class="btn primary" href="https://github.com/puhuiai/puhuiai-fanrenge/releases/download/v4.0.0/Fanrenge_v4.0.0.exe">下载 v4.0.0</a><a class="btn ghost" href="https://github.com/puhuiai/puhuiai-fanrenge">说明 / 反馈</a></div>
+      </article>
+      <article class="card" id="maodun">
+        <span class="tag">Windows</span><h2>猫盾 Maodun 5.0</h2>
+        <p class="desc">发现本机 AI Agent、工作流和知识库，执行权限管控、行为记录与高风险操作处置。</p>
+        <div class="actions"><a class="btn primary" href="https://github.com/puhuiai/maodun/releases/download/v5.0.0/Maodun5.0_Setup.exe">下载 v5.0.0</a><a class="btn ghost" href="https://github.com/puhuiai/maodun">说明 / 反馈</a></div>
+      </article>
+      <article class="card" id="lobsterpro">
+        <span class="tag">Windows</span><h2>龙虾 Pro 3.0</h2>
+        <p class="desc">AI Agent 桌面工作台，连接大模型、任务流程与本地工具，支持 OpenAI 兼容接口和 Ollama。</p>
+        <div class="actions"><a class="btn primary" href="https://github.com/puhuiai/lobsterpro3/releases/download/v3.0.0/LobsterPro3.0_Setup.exe">下载 v3.0.0</a><a class="btn ghost" href="https://github.com/puhuiai/lobsterpro3">说明 / 反馈</a></div>
+      </article>
+    </section>
 
-    <div class="card">
-      <span class="tag">Windows</span>
-      <h2>普惠AI 指令拆解引擎 4.0</h2>
-      <p class="desc">把大白话需求一键拆成 AI 能直接执行的精确指令，内置术语库与任务流水线。</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://github.com/puhuiai/puhuiai-fanrenge/releases/download/v4.0.0/Fanrenge_v4.0.0.exe">下载 v4.0.0</a>
-        <a class="btn btn-ghost" href="https://github.com/puhuiai/puhuiai-fanrenge">说明 / 反馈</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <span class="tag">Windows</span>
-      <h2>猫盾 Maodun 5.0</h2>
-      <p class="desc">AI Agent 规范监视器：发现并监视本机 AI 智能体行为，七条底线 + 四级处置，不改一行代码。</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://github.com/puhuiai/maodun/releases/download/v5.0.0/Maodun5.0_Setup.exe">下载 v5.0.0</a>
-        <a class="btn btn-ghost" href="https://github.com/puhuiai/maodun">说明 / 反馈</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <span class="tag">Windows</span>
-      <h2>龙虾 Pro 3.0</h2>
-      <p class="desc">AGI Engine 桌面工作台：把大模型、任务流程与本地工具有机串起来，一句话驱动干活。</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://github.com/puhuiai/lobsterpro3/releases/download/v3.0.0/LobsterPro3.0_Setup.exe">下载 v3.0.0</a>
-        <a class="btn btn-ghost" href="https://github.com/puhuiai/lobsterpro3">说明 / 反馈</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="note">
-    <strong>使用与反馈：</strong>以上软件均免费提供，源码不公开（闭源），禁止反编译、二次打包与商业转售。
-    使用中遇到问题或有建议，请到对应仓库的 <a href="https://github.com/puhuiai" style="color:var(--accent)">Issues</a> 提交，
-    注明系统版本与复现步骤，我们会定期汇总回复。
-  </div>
-
-  <footer>
-    开发者：汪君 · 普惠AI &nbsp;|&nbsp;
-    <a href="https://github.com/puhuiai">GitHub 主页</a> &nbsp;|&nbsp;
-    <a href="https://puhuiai.com.cn">puhuiai.com.cn</a>
-  </footer>
-</div>
+    <div class="note"><strong>使用与反馈：</strong>以上软件免费提供，均为闭源发布。请从官方 Releases 或本页下载。遇到问题请到对应 GitHub 仓库提交 Issues，并注明系统版本与复现步骤。</div>
+    <footer>开发者：汪君 · 普惠AI &nbsp;|&nbsp; <a href="https://github.com/puhuiai">GitHub 主页</a> &nbsp;|&nbsp; <a href="https://puhuiai.com.cn">puhuiai.com.cn</a></footer>
+  </main>
 </body>
 </html>
