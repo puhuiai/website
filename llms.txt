@@ -1,0 +1,16 @@
+# 普惠AI
+
+> 普惠AI 提供免费的 AI Agent、提示词工程、来电拦截和 Windows 桌面效率工具。
+
+## Products
+
+- [猫盾 Maodun](https://puhuiai.github.io/website/maodun.html): Windows AI Agent 规范监视器，提供行为记录、权限管控和高风险操作处置。
+- [普惠AI 指令拆解引擎](https://puhuiai.github.io/website/fanrenge.html): 将中文需求转换为 AI 提示词、任务包和工作流，支持 Windows、CLI 与 Agent Skill。
+- [拦接宝 LanJieBao](https://puhuiai.github.io/website/lanjiebao.html): Android 来电拦截与 AI 留言助手，支持离线号码归属地查询。
+- [龙虾 Pro LobsterPro](https://puhuiai.github.io/website/lobsterpro.html): Windows AI Agent 桌面工作台，支持 OpenAI 兼容接口和 Ollama。
+
+## Source
+
+- [GitHub profile](https://github.com/puhuiai)
+- [Product center](https://puhuiai.github.io/website/)
+- [Sitemap](https://puhuiai.github.io/website/sitemap.xml)
